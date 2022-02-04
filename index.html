@@ -11,10 +11,14 @@
 
 <body>
     <div id="app">
-        <h1>{{ title }} - {{ age }}</h1>
-        <button v-on:click="age++">Increase</button>
-        <button v-on:click="age--">Decrease</button>
-        <button @click="changeTitle('Change again!')">Change Title</button>
+        <h1 v-if="show">True</h1>
+
+        <button @click="toggleShow">{{ show ? 'Show': 'Hide' }}</button>
+
+        <hr>
+
+        <h1 v-show="show">True</h1>
+
     </div>
 
     <script src="app.js"></script>

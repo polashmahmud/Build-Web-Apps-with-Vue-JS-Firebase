@@ -8,14 +8,24 @@
     <title>Vue Basic</title>
     <script src="https://unpkg.com/vue@next"></script>
     <style>
-        .box {
-            display: inline-block;
-            text-align: center;
-            background: #ddd;
-            padding: 100px 0;
-            width: 400px;
-            cursor: pointer;
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            width: 300px;
+            border: 1px solid #ddd;
+            padding: 20px;
             margin: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        li.fav {
+            border: 1px solid red;
+            background: #333;
+            color: white;
         }
     </style>
 </head>
@@ -23,7 +33,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(book, index) in books" :key="book.index">
+            <li v-for="(book, index) in books" :key="book.index" :class="{ fav: book.isFav}">
                 <img :src="book.image" :alt="book.name">
                 <h1>{{ book.name }}</h1>
                 <p>{{ book.author }}</p>

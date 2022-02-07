@@ -8,9 +8,9 @@ const app = Vue.createApp({
             y: 0,
             url: "https://www.google.com/",
             books: [
-                { id: 1, name: 'Bohubrihi', author: 'Humayun Ahmed', image: 'images/1.jpeg' },
-                { id: 2, name: 'Tomake', author: 'Humayun Ahmed', image: 'images/2.jpeg' },
-                { id: 3, name: 'Dorjar Opashe', author: 'Humayun Ahmed', image: 'images/3.jpeg' },
+                { id: 1, name: 'Bohubrihi', author: 'Humayun Ahmed', image: 'images/1.jpeg', isFav: true },
+                { id: 2, name: 'Tomake', author: 'Humayun Ahmed', image: 'images/2.jpeg', isFav: false },
+                { id: 3, name: 'Dorjar Opashe', author: 'Humayun Ahmed', image: 'images/3.jpeg', isFav: true },
             ]
         }
     },

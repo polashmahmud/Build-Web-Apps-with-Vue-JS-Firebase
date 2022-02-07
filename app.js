@@ -15,17 +15,21 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        handleMouse(e, number) {
-            console.log(e, e.type);
-            if (number) {
-                console.log(number)
-            }
-        },
-
-        handleMouseMove(e) {
-            this.x = e.offsetX;
-            this.y = e.offsetY;
+        toggleFav(book) {
+            book.isFav = !book.isFav;
         }
+    },
+    computed: {
+        totalBooks() {
+            return this.books.length;
+        },
+        favBooksCount() {
+            let total = this.books.filter((book) => book.isFav);
+            return total.length;
+        },
+        favBooks() {
+            return this.books.filter((book) => book.isFav);
+        },
     }
 });
 

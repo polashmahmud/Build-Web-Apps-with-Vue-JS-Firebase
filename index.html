@@ -32,8 +32,10 @@
 
 <body>
     <div id="app">
+        <h1>Total Books: {{ totalBooks }} - Fev: {{ favBooksCount }}</h1>
         <ul>
-            <li v-for="(book, index) in books" :key="book.index" :class="{ fav: book.isFav}">
+            <li v-for="(book, index) in favBooks" :key="book.index" :class="{ fav: book.isFav}"
+                @click="toggleFav(book)">
                 <img :src="book.image" :alt="book.name">
                 <h1>{{ book.name }}</h1>
                 <p>{{ book.author }}</p>

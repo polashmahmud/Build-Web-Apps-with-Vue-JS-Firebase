@@ -23,7 +23,11 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(book, index) in books" :key="book.index">{{ book.name }} - {{ book.author }} - {{ index }}</li>
+            <li v-for="(book, index) in books" :key="book.index">
+                <img :src="book.image" :alt="book.name">
+                <h1>{{ book.name }}</h1>
+                <p>{{ book.author }}</p>
+            </li>
         </ul>
     </div>
 

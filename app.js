@@ -6,10 +6,11 @@ const app = Vue.createApp({
             show: false,
             x: 0,
             y: 0,
+            url: "https://www.google.com/",
             books: [
-                { id: 1, name: 'book one', author: 'some one' },
-                { id: 2, name: 'book two', author: 'some two' },
-                { id: 3, name: 'book three', author: 'some three' },
+                { id: 1, name: 'Bohubrihi', author: 'Humayun Ahmed', image: 'images/1.jpeg' },
+                { id: 2, name: 'Tomake', author: 'Humayun Ahmed', image: 'images/2.jpeg' },
+                { id: 3, name: 'Dorjar Opashe', author: 'Humayun Ahmed', image: 'images/3.jpeg' },
             ]
         }
     },

@@ -3,11 +3,16 @@
 
   <div @click="handleClick" ref="box" class="box"></div>
   <input type="text" ref="name" placeholder="name" style="margin-top: 20px" />
+
+  <simple-modal />
 </template>
 
 <script>
+import SimpleModal from "./components/Modal.vue";
+
 export default {
   name: "App",
+  components: { SimpleModal },
   data() {
     return {
       title: "This is my first title",
@@ -24,6 +29,10 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
+
 .box {
   width: 200px;
   height: 200px;

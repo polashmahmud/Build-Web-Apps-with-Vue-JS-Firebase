@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <simple-modal />
+  <simple-modal :heading="heading" :text="text" />
 </template>
 
 <script>
@@ -12,6 +12,8 @@ export default {
   data() {
     return {
       title: "This is my first title",
+      heading: "Sign Up Form",
+      text: "Welcome Boss.!",
     };
   },
 };

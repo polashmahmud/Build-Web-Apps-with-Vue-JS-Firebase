@@ -1,14 +1,28 @@
 <template>
   <div class="backdrop">
-    <div class="modal">
-      <h1>This is modal heading</h1>
-      <p>Modal content here!</p>
+    <div class="modal" :class="{ dark: theme === 'dark' }">
+      <h1>{{ heading }}</h1>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    heading: {
+      type: String,
+      default: "Welcome Form",
+    },
+    text: {
+      type: String,
+    },
+    theme: {
+      type: String,
+      default: "white",
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -28,12 +42,17 @@ export default {};
   border-radius: 10px;
 }
 
+.modal.dark {
+  background: black;
+  color: white;
+}
+
 h1 {
-  background: red;
   border: none;
 }
 
 p {
   font-style: normal;
+  text-align: center;
 }
 </style>
